@@ -4,6 +4,7 @@
 #include<time.h>
 void second();
 void third();
+void fourth();
 void delay(unsigned int mseconds)
 {
     clock_t goal=mseconds + clock();
@@ -113,7 +114,7 @@ void second()
                 printf("\nCorrect Answer!!");
                 printf("\nYou Have Won Rs.20000!!!!");
                 printf("\n\n\n\n\nLoading Game.");
-                score=30000;
+                score=40000;
                 for(i=0;i<2;i++)
                 {
 
@@ -155,5 +156,62 @@ void second()
 }
 void third()
 {
-    printf("\n\nYET TO BUILD...!!!");
+    int ch,score,i;
+    system("CLS");
+    printf("Congratulations, You Will Now Answer Third Question that is worth Rs.40000..");
+    printf("\nThe Last element of an array in c will be at index ?");
+    printf("\n1.n");
+    printf("\n2.n-1");
+    printf("\n3.n+1");
+    printf("\n4.none of these");
+    printf("\nEnter Your answer:");
+    scanf("%d",&ch);
+    if(ch==2)
+            {
+                system("CLS");
+                printf("\nCorrect Answer!!");
+                printf("\nYou Have Won Rs.80000!!!!");
+                printf("\n\n\n\n\nLoading Game.");
+                score=80000;
+                for(i=0;i<2;i++)
+                {
+
+                    delay(1000);
+                    printf(".");
+                }
+                system("CLS");
+                printf("You Wanna See Your Next Question or Quit the game?(1/2):\n");
+                scanf("%d",&ch);
+                if(ch==1)
+                {
+                 fourth();
+                }
+                else
+                {
+                    point:
+                    system("CLS");
+                    printf("\nYour Score is:Rs.%d",score);
+                    printf("\nEnter 1 to exit...");
+                    scanf("%d",&ch);
+                    if(ch==1)
+                    {
+                     system("EXIT");
+                    }
+                    else
+                    {
+                        goto point;
+                    }
+
+                }
+            }
+            else
+            {
+                system("CLS");
+                printf("Sorry,Your Answer is Wrong!!");
+                printf("\nTry Again....");
+            }
+}
+void fourth()
+{
+    printf("\nDEMO FUNCTION");
 }
