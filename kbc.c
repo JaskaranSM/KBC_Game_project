@@ -21,11 +21,6 @@ void tenth();
 void random();
 void wrong();
 void start();
-void delay(unsigned int mseconds)
-{
-    clock_t goal=mseconds + clock();
-    while(goal > clock());
-}
 void printRandoms(int lower, int upper,
                              int count)
 {
