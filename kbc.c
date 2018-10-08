@@ -2,6 +2,13 @@
 #include<string.h>
 #include<stdlib.h>
 #include<time.h>
+int num=0;
+int ch;
+int ch,len,i,score;
+int lower = 1, upper = 10, count = 1;
+char choice[200];
+char name[1000];
+void first();
 void second();
 void third();
 void fourth();
@@ -11,17 +18,27 @@ void seventh();
 void eighth();
 void nineth();
 void tenth();
+void random();
+void wrong();
 void delay(unsigned int mseconds)
 {
     clock_t goal=mseconds + clock();
     while(goal > clock());
 }
+void printRandoms(int lower, int upper,
+                             int count)
+{
+    int i;
+    for (i = 0; i < count; i++) {
+         num = (rand() %
+           (upper - lower + 1)) + lower; //Randomly generated value is being Stored in num variable
+         int *rptr;
+         rptr=&num;
+    }
+}
 int main()
 {
     system("CLS");
-    int ch,len,i,score;
-    char choice[200];
-    char name[1000];
     printf("----------------------------");
     printf("\n-Kaun Banega Crorepati Game-");
     printf("\n----------------------------");
@@ -33,17 +50,26 @@ int main()
     switch(ch)
     {
     case 1:
-        start:
-        getchar();
+         start();
+         break;
+    case 2:
         system("CLS");
-        printf("\nEnter Your Name:");
-        gets(name);
-        if(name[0]=='j')
-        {
-            ch=NULL;
+        printf("DIDNT ADDED YET....PRESS ENTER TO GO BACK.");
+        getchar();
+        if (getchar() == '\n')
+            main();
+        break;
+    case 3:
+        system("EXIT");
+        break;
+    default:
+        if (getchar() == '\n')
+            main();
+    }
+}
+void first()
+{
             system("CLS");
-            printf("Hello %s, Welcome To The KBC Game..",name);
-            printf("\n\nLets Start, Your First Question is:--");
             printf("\n\nWho Developed C-Language?");
             printf("\n\nOptions:-");
             printf("\n1.Nicola Tesla");
@@ -54,76 +80,18 @@ int main()
             scanf("%d",&ch);
             if(ch==2)
             {
-                system("CLS");
-                printf("\nCorrect Answer!!");
-                printf("\nYou Have Won Rs.10000!!!!");
-                printf("\n\n\n\n\nLoading Game.");
-                score=10000;
-                for(i=0;i<2;i++)
-                {
-
-                    delay(1000);
-                    printf(".");
-                }
-                system("CLS");
-                printf("You Wanna See Your Next Question or Quit the game?(1/2):\n");
-                scanf("%d",&ch);
-                if(ch==1)
-                {
-                 second();
-                }
-                else
-                {
-                    point:
-                    system("CLS");
-                    printf("\nYour Score is:%d",score);
-                    printf("\nEnter 1 to exit...");
-                    scanf("%d",&ch);
-                    if(ch==1)
-                    {
-                     system("EXIT");
-                    }
-                    else
-                    {
-                        goto point;
-                    }
-
-                }
+                printf("\nCORRECT ANSWER");
+                printf("\nPress Enter to get next question...");
+                getchar();
+                if(getchar() == '\n')
+                    random();
             }
             else
-            {
-                system("CLS");
-                printf("Sorry,Your Answer is Wrong!!");
-                printf("\nTry Again....");
-                printf("\nPress 1 to Start Game Again:");
-                scanf("%d",&ch);
-                if(ch==1)
-                    goto start;
-            }
-        }
-        break;
-    case 2:
-        system("CLS");
-        printf("Yet to Build....");
-        printf("\nPress 1 to go back to main menu:");
-        scanf("%d",&ch);
-        if(ch==1)
-            main();
-        break;
-    case 3:
-        system("EXIT");
-        break;
-    default:
-        printf("\nWrong Input");
-        break;
-    }
-    return 0;
+                wrong();
 }
 void second()
 {
-    int ch,score,i;
     system("CLS");
-    printf("Congratulations, You Will Now Answer Second Question that is worth Rs.20000..");
     printf("\n\nTraversing in Linked list Means?");
     printf("\nOptions:-");
     printf("\n1.Searching");
@@ -134,59 +102,18 @@ void second()
     scanf("%d",&ch);
     if(ch==3)
             {
-                system("CLS");
-                printf("\nCorrect Answer!!");
-                printf("\nYou Have Won Rs.20000!!!!");
-                printf("\n\n\n\n\nLoading Game.");
-                score=20000;
-                for(i=0;i<2;i++)
-                {
-
-                    delay(1000);
-                    printf(".");
-                }
-                system("CLS");
-                printf("You Wanna See Your Next Question or Quit the game?(1/2):\n");
-                scanf("%d",&ch);
-                if(ch==1)
-                {
-                 third();
-                }
-                else
-                {
-                    point:
-                    system("CLS");
-                    printf("\nYour Score is:Rs.%d",score);
-                    printf("\nEnter 1 to exit...");
-                    scanf("%d",&ch);
-                    if(ch==1)
-                    {
-                     system("EXIT");
-                    }
-                    else
-                    {
-                        goto point;
-                    }
-
-                }
+                printf("\nCORRECT ANSWER");
+                printf("\nPress Enter to get next question...");
+                getchar();
+                if(getchar() == '\n')
+                    random();
             }
             else
-            {
-                system("CLS");
-                printf("Sorry,Your Answer is Wrong!!");
-                printf("\nTry Again....");
-                printf("\nPress 1 to Start Game Again:");
-                scanf("%d",&ch);
-                if(ch==1)
-                    main();
-            }
-
+                wrong();
 }
 void third()
 {
-    int ch,score,i;
     system("CLS");
-    printf("Congratulations, You Will Now Answer Third Question that is worth Rs.40000..");
     printf("\nThe Last element of an array in c will be at index ?");
     printf("\n1.n");
     printf("\n2.n-1");
@@ -196,59 +123,18 @@ void third()
     scanf("%d",&ch);
     if(ch==2)
             {
-                system("CLS");
-                printf("\nCorrect Answer!!");
-                printf("\nYou Have Won Rs.40000!!!!");
-                printf("\n\n\n\n\nLoading Game.");
-                score=40000;
-                for(i=0;i<2;i++)
-                {
-
-                    delay(1000);
-                    printf(".");
-                }
-                system("CLS");
-                printf("You Wanna See Your Next Question or Quit the game?(1/2):\n");
-                scanf("%d",&ch);
-                if(ch==1)
-                {
-                 fourth();
-                }
-                else
-                {
-                    point:
-                    system("CLS");
-                    printf("\nYour Score is:Rs.%d",score);
-                    printf("\nEnter 1 to exit...");
-                    scanf("%d",&ch);
-                    if(ch==1)
-                    {
-                     system("EXIT");
-                    }
-                    else
-                    {
-                        goto point;
-                    }
-
-                }
+                printf("\nCORRECT ANSWER");
+                printf("\nPress Enter to get next question...");
+                getchar();
+                if(getchar() == '\n')
+                    random();
             }
             else
-            {
-                system("CLS");
-                printf("Sorry,Your Answer is Wrong!!");
-                printf("\nTry Again....");
-                printf("\nPress 1 to Start Game Again:");
-                scanf("%d",&ch);
-                if(ch==1)
-                    main();
-            }
-
+                wrong();
 }
 void fourth()
 {
-   int ch,score,i;
     system("CLS");
-    printf("Congratulations, You Will Now Answer Fourth Question that is worth Rs.80000..");
     printf("\nThe Index Value of Any Array starts From ?");
     printf("\n1.0");
     printf("\n2.1");
@@ -258,58 +144,18 @@ void fourth()
     scanf("%d",&ch);
     if(ch==1)
             {
-                system("CLS");
-                printf("\nCorrect Answer!!");
-                printf("\nYou Have Won Rs.80000!!!!");
-                printf("\n\n\n\n\nLoading Game.");
-                score=80000;
-                for(i=0;i<2;i++)
-                {
-
-                    delay(1000);
-                    printf(".");
-                }
-                system("CLS");
-                printf("You Wanna See Your Next Question or Quit the game?(1/2):\n");
-                scanf("%d",&ch);
-                if(ch==1)
-                {
-                 fifth();
-                }
-                else
-                {
-                    point:
-                    system("CLS");
-                    printf("\nYour Score is:Rs.%d",score);
-                    printf("\nEnter 1 to exit...");
-                    scanf("%d",&ch);
-                    if(ch==1)
-                    {
-                     system("EXIT");
-                    }
-                    else
-                    {
-                        goto point;
-                    }
-
-                }
+                printf("\nCORRECT ANSWER");
+                printf("\nPress Enter to get next question...");
+                getchar();
+                if(getchar() == '\n')
+                    random();
             }
             else
-            {
-                system("CLS");
-                printf("Sorry,Your Answer is Wrong!!");
-                printf("\nTry Again....");
-                printf("\nPress 1 to Start Game Again:");
-                scanf("%d",&ch);
-                if(ch==1)
-                    main();
-            }
+                wrong();
 }
 void fifth()
 {
-    int ch,score,i;
     system("CLS");
-    printf("Congratulations, You Will Now Answer fifth Question that is worth Rs.160000..");
     printf("\nWho is the father of computer ?");
     printf("\n1.Roman Pearce");
     printf("\n2.Steve Jobs");
@@ -319,119 +165,39 @@ void fifth()
     scanf("%d",&ch);
     if(ch==4)
             {
-                system("CLS");
-                printf("\nCorrect Answer!!");
-                printf("\nYou Have Won Rs.160000!!!!");
-                printf("\n\n\n\n\nLoading Game.");
-                score=160000;
-                for(i=0;i<2;i++)
-                {
-
-                    delay(1000);
-                    printf(".");
-                }
-                system("CLS");
-                printf("You Wanna See Your Next Question or Quit the game?(1/2):\n");
-                scanf("%d",&ch);
-                if(ch==1)
-                {
-                 sixth();
-                }
-                else
-                {
-                    point:
-                    system("CLS");
-                    printf("\nYour Score is:Rs.%d",score);
-                    printf("\nEnter 1 to exit...");
-                    scanf("%d",&ch);
-                    if(ch==1)
-                    {
-                     system("EXIT");
-                    }
-                    else
-                    {
-                        goto point;
-                    }
-
-                }
+                printf("\nCORRECT ANSWER");
+                printf("\nPress Enter to get next question...");
+                getchar();
+                if(getchar() == '\n')
+                    random();
             }
             else
-            {
-                system("CLS");
-                printf("Sorry,Your Answer is Wrong!!");
-                printf("\nTry Again....");
-                printf("\nPress 1 to Start Game Again:");
-                scanf("%d",&ch);
-                if(ch==1)
-                    main();
-            }
+                wrong();
 }
 void sixth()
 {
-    int ch,score,i;
     system("CLS");
-    printf("Congratulations, You Will Now Answer fifth Question that is worth Rs.320000..");
     printf("\nMaximum Data Rate of a DDR2 Ram is ?");
     printf("\n1.533 MT/s");
     printf("\n2.667 MT/s");
-    printf("\n3.800 MT/s");
-    printf("\n4.1066 MT/s");
+    printf("\n3.1066 MT/s");
+    printf("\n4.1333 MT/s");
     printf("\nEnter Your answer:");
     scanf("%d",&ch);
-    if(ch==4)
+    if(ch==3)
             {
-                system("CLS");
-                printf("\nCorrect Answer!!");
-                printf("\nYou Have Won Rs.320000!!!!");
-                printf("\n\n\n\n\nLoading Game.");
-                score=320000;
-                for(i=0;i<2;i++)
-                {
-
-                    delay(1000);
-                    printf(".");
-                }
-                system("CLS");
-                printf("You Wanna See Your Next Question or Quit the game?(1/2):\n");
-                scanf("%d",&ch);
-                if(ch==1)
-                {
-                 seventh();
-                }
-                else
-                {
-                    point:
-                    system("CLS");
-                    printf("\nYour Score is:Rs.%d",score);
-                    printf("\nEnter 1 to exit...");
-                    scanf("%d",&ch);
-                    if(ch==1)
-                    {
-                     system("EXIT");
-                    }
-                    else
-                    {
-                        goto point;
-                    }
-
-                }
+                printf("\nCORRECT ANSWER");
+                printf("\nPress Enter to get next question...");
+                getchar();
+                if(getchar() == '\n')
+                    random();
             }
             else
-            {
-                system("CLS");
-                printf("Sorry,Your Answer is Wrong!!");
-                printf("\nTry Again....");
-                printf("\nPress 1 to Start Game Again:");
-                scanf("%d",&ch);
-                if(ch==1)
-                    main();
-            }
+                wrong();
 }
 void seventh()
 {
-    int ch,score,i;
     system("CLS");
-    printf("Congratulations, You Will Now Answer Seventh Question that is worth Rs.640000..");
     printf("\nWho is Fifth Prime Minister of India  ?");
     printf("\n1.Rajiv Gandhi");
     printf("\n2.Charan Singh");
@@ -441,58 +207,18 @@ void seventh()
     scanf("%d",&ch);
     if(ch==2)
             {
-                system("CLS");
-                printf("\nCorrect Answer!!");
-                printf("\nYou Have Won Rs.1280000!!!!");
-                printf("\n\n\n\n\nLoading Game.");
-                score=640000;
-                for(i=0;i<2;i++)
-                {
-
-                    delay(1000);
-                    printf(".");
-                }
-                system("CLS");
-                printf("You Wanna See Your Next Question or Quit the game?(1/2):\n");
-                scanf("%d",&ch);
-                if(ch==1)
-                {
-                 eighth();
-                }
-                else
-                {
-                    point:
-                    system("CLS");
-                    printf("\nYour Score is:Rs.%d",score);
-                    printf("\nEnter 1 to exit...");
-                    scanf("%d",&ch);
-                    if(ch==1)
-                    {
-                     system("EXIT");
-                    }
-                    else
-                    {
-                        goto point;
-                    }
-
-                }
+                printf("\nCORRECT ANSWER");
+                printf("\nPress Enter to get next question...");
+                getchar();
+                if(getchar() == '\n')
+                    random();
             }
             else
-            {
-                system("CLS");
-                printf("Sorry,Your Answer is Wrong!!");
-                printf("\nTry Again....");
-                printf("\nPress 1 to Start Game Again:");
-                scanf("%d",&ch);
-                if(ch==1)
-                    main();
-            }
+                wrong();
 }
 void eighth()
 {
-     int ch,score,i;
     system("CLS");
-    printf("Congratulations, You Will Now Answer fifth Question that is worth Rs.1280000..");
     printf("\nWhat is Einstein's Equation ?");
     printf("\n1.E=Mc2");
     printf("\n2.(a+B)2=a2+2ab+b2");
@@ -502,119 +228,39 @@ void eighth()
     scanf("%d",&ch);
     if(ch==1)
             {
-                system("CLS");
-                printf("\nCorrect Answer!!");
-                printf("\nYou Have Won Rs.1280000!!!!");
-                printf("\n\n\n\n\nLoading Game.");
-                score=1280000;
-                for(i=0;i<2;i++)
-                {
-
-                    delay(1000);
-                    printf(".");
-                }
-                system("CLS");
-                printf("You Wanna See Your Next Question or Quit the game?(1/2):\n");
-                scanf("%d",&ch);
-                if(ch==1)
-                {
-                 nineth();
-                }
-                else
-                {
-                    point:
-                    system("CLS");
-                    printf("\nYour Score is:Rs.%d",score);
-                    printf("\nEnter 1 to exit...");
-                    scanf("%d",&ch);
-                    if(ch==1)
-                    {
-                     system("EXIT");
-                    }
-                    else
-                    {
-                        goto point;
-                    }
-
-                }
+                printf("\nCORRECT ANSWER");
+                printf("\nPress Enter to get next question...");
+                getchar();
+                if(getchar() == '\n')
+                    random();
             }
             else
-            {
-                system("CLS");
-                printf("Sorry,Your Answer is Wrong!!");
-                printf("\nTry Again....");
-                printf("\nPress 1 to Start Game Again:");
-                scanf("%d",&ch);
-                if(ch==1)
-                    main();
-            }
+                wrong();
 }
 void nineth()
 {
-    int ch,score,i;
     system("CLS");
-    printf("Congratulations, You Will Now Answer fifth Question that is worth Rs.2560000..");
-    printf("\nWho is the father of computer ?");
-    printf("\n1.Roman Pearce");
-    printf("\n2.Steve Jobs");
-    printf("\n3.Bill Gates");
-    printf("\n4.Charles Babbage");
+    printf("\nWho Created Java Programming Language ?");
+    printf("\n1.Guido van Rossum");
+    printf("\n2.Yukihiro Matsumoto");
+    printf("\n3.Bjarne Stroustrup");
+    printf("\n4.James Gosling");
     printf("\nEnter Your answer:");
     scanf("%d",&ch);
     if(ch==4)
             {
-                system("CLS");
-                printf("\nCorrect Answer!!");
-                printf("\nYou Have Won Rs.2560000!!!!");
-                printf("\n\n\n\n\nLoading Game.");
-                score=2560000;
-                for(i=0;i<2;i++)
-                {
-
-                    delay(1000);
-                    printf(".");
-                }
-                system("CLS");
-                printf("You Wanna See Your Next Question or Quit the game?(1/2):\n");
-                scanf("%d",&ch);
-                if(ch==1)
-                {
-                 tenth();
-                }
-                else
-                {
-                    point:
-                    system("CLS");
-                    printf("\nYour Score is:Rs.%d",score);
-                    printf("\nEnter 1 to exit...");
-                    scanf("%d",&ch);
-                    if(ch==1)
-                    {
-                     system("EXIT");
-                    }
-                    else
-                    {
-                        goto point;
-                    }
-
-                }
+                printf("\nCORRECT ANSWER");
+                printf("\nPress Enter to get next question...");
+                getchar();
+                if(getchar() == '\n')
+                    random();
             }
             else
-            {
-                system("CLS");
-                printf("Sorry,Your Answer is Wrong!!");
-                printf("\nTry Again....");
-                printf("\nPress 1 to Start Game Again:");
-                scanf("%d",&ch);
-                if(ch==1)
-                    main();
-            }
+                wrong();
 }
 void tenth()
 {
-     int ch,score,i;
     system("CLS");
-    printf("Congratulations, You Will Now Answer Tenth Question that is worth Rs.10240000..");
     printf("\nIf You Choose an answer to this question at random, What is the chance you will be correct ?");
     printf("\n1.25%");
     printf("\n2.35%");
@@ -622,53 +268,89 @@ void tenth()
     printf("\n4.75%");
     printf("\nEnter Your answer:");
     scanf("%d",&ch);
-    if(ch==1)
+    if(ch==4)
             {
-                system("CLS");
-                printf("\nCorrect Answer!!");
-                printf("\nYou Have Won Rs.10240000!!!!");
-                printf("\n\n\n\n\nLoading Game.");
-                score=10240000;
-                for(i=0;i<2;i++)
-                {
-
-                    delay(1000);
-                    printf(".");
-                }
-                end:
-                system("CLS");
-                printf("HURRRAAHHH!!! You Have Completed the Game. Now You Will Be Taking 1 Crore Rs. To Your Home.");
-                printf("\nPress 1 to Start Game Again or Press 2 to Leave...:");
-                scanf("%d",&ch);
-                if(ch==1)
-                {
-                    main();
-                }
-                else if(ch==2)
-                {
-                    printf("\nYour Score is:Rs.%d",score);
-                    printf("\nEnter 1 to Exit..:");
-                    scanf("%d",&ch);
-                    if(ch==1)
-                    {
-                        system("EXIT");
-                    }
-                }
-                else
-                {
-                    printf("\nWrong Choice...Try Again.");
-                    goto end;
-                }
-
+                printf("\nCORRECT ANSWER");
+                printf("\nPress Enter to get next question...");
+                getchar();
+                if(getchar() == '\n')
+                    random();
             }
             else
-            {
-                system("CLS");
-                printf("Sorry,Your Answer is Wrong!!");
-                printf("\nTry Again....");
-                printf("\nPress 1 to Start Game Again:");
-                scanf("%d",&ch);
-                if(ch==1)
-                    main();
-            }
+                wrong();
 }
+void wrong()
+{
+    printf("\n\nYour Answer is wrong..So you Have to Try Again from starting..");
+    printf("\nPress Enter to Restart Game..:");
+    if (getchar() == '\n')
+    {
+        start();
+    }
+}
+void random()
+{
+    srand(time(0));
+        printRandoms(lower, upper, count);
+        printf("\nvalue generated is :%d",num);
+        if(num==1)
+        {
+            first();
+        }
+        else if(num==2)
+        {
+            second();
+        }
+        else if(num==3)
+        {
+            third();
+        }
+        else if(num==4)
+        {
+            fourth();
+        }
+        else if(num==5)
+        {
+            fifth();
+        }
+        else if(num==6)
+        {
+            sixth();
+        }
+        else if(num==7)
+        {
+            seventh();
+        }
+        else if(num==8)
+        {
+            eighth();
+        }
+        else if(num==9)
+        {
+            nineth();
+        }
+        else if(num==10)
+        {
+            tenth();
+        }
+}
+void start()
+{
+    while(ch!=2)
+    {
+        getchar();
+        system("CLS");
+        printf("----GAME STARTED----");
+        printf("\nEnter Your Name:");
+        gets(name);
+        printf("\nHello %s, Welcome To The KBC Game..",name);
+        printf("\n\nPress Enter To Let The Game Roll..");
+        if (getchar() == '\n')
+        {
+              first();
+        }
+    }
+    printf("\nDo You Want to Continue Or not?(1/2):");
+    scanf("%d",&ch);
+}
+
