@@ -20,6 +20,7 @@ void nineth();
 void tenth();
 void random();
 void wrong();
+void start();
 void delay(unsigned int mseconds)
 {
     clock_t goal=mseconds + clock();
