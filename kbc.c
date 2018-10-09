@@ -2,6 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 #include<time.h>
+int score=0;
 int num=0;
 int ch;
 int ch,len,i,score;
@@ -77,10 +78,20 @@ void first()
             if(ch==2)
             {
                 printf("\nCORRECT ANSWER");
+                score=score+1000;
                 printf("\nPress Enter to get next question...");
                 getchar();
                 if(getchar() == '\n')
+                {
+                    if(score==10000)
+                    {
+                    printf("\nYou Won the Game.");
+                    }
+                    else
+                    {
                     random();
+                    }
+                }
             }
             else
                 wrong();
@@ -99,10 +110,20 @@ void second()
     if(ch==3)
             {
                 printf("\nCORRECT ANSWER");
+                score=score+1000;
                 printf("\nPress Enter to get next question...");
                 getchar();
                 if(getchar() == '\n')
+                {
+                    if(score==10000)
+                    {
+                    printf("\nYou Won the Game.");
+                    }
+                    else
+                    {
                     random();
+                    }
+                }
             }
             else
                 wrong();
@@ -120,10 +141,20 @@ void third()
     if(ch==2)
             {
                 printf("\nCORRECT ANSWER");
+                score=score+1000;
                 printf("\nPress Enter to get next question...");
                 getchar();
                 if(getchar() == '\n')
+                {
+                    if(score==10000)
+                    {
+                    printf("\nYou Won the Game.");
+                    }
+                    else
+                    {
                     random();
+                    }
+                }
             }
             else
                 wrong();
@@ -141,10 +172,20 @@ void fourth()
     if(ch==1)
             {
                 printf("\nCORRECT ANSWER");
+                score=score+1000;
                 printf("\nPress Enter to get next question...");
                 getchar();
                 if(getchar() == '\n')
+                {
+                    if(score==10000)
+                    {
+                    printf("\nYou Won the Game.");
+                    }
+                    else
+                    {
                     random();
+                    }
+                }
             }
             else
                 wrong();
@@ -162,10 +203,20 @@ void fifth()
     if(ch==4)
             {
                 printf("\nCORRECT ANSWER");
+                score=score+1000;
                 printf("\nPress Enter to get next question...");
                 getchar();
                 if(getchar() == '\n')
+                {
+                    if(score==10000)
+                    {
+                    printf("\nYou Won the Game.");
+                    }
+                    else
+                    {
                     random();
+                    }
+                }
             }
             else
                 wrong();
@@ -183,10 +234,20 @@ void sixth()
     if(ch==3)
             {
                 printf("\nCORRECT ANSWER");
+                score=score+1000;
                 printf("\nPress Enter to get next question...");
                 getchar();
                 if(getchar() == '\n')
+                {
+                    if(score==10000)
+                    {
+                    printf("\nYou Won the Game.");
+                    }
+                    else
+                    {
                     random();
+                    }
+                }
             }
             else
                 wrong();
@@ -204,10 +265,20 @@ void seventh()
     if(ch==2)
             {
                 printf("\nCORRECT ANSWER");
+                score=score+1000;
                 printf("\nPress Enter to get next question...");
                 getchar();
                 if(getchar() == '\n')
+                {
+                    if(score==10000)
+                    {
+                    printf("\nYou Won the Game.");
+                    }
+                    else
+                    {
                     random();
+                    }
+                }
             }
             else
                 wrong();
@@ -225,10 +296,20 @@ void eighth()
     if(ch==1)
             {
                 printf("\nCORRECT ANSWER");
+                score=score+1000;
                 printf("\nPress Enter to get next question...");
                 getchar();
                 if(getchar() == '\n')
+                {
+                    if(score==10000)
+                    {
+                    printf("\nYou Won the Game.");
+                    }
+                    else
+                    {
                     random();
+                    }
+                }
             }
             else
                 wrong();
@@ -246,10 +327,20 @@ void nineth()
     if(ch==4)
             {
                 printf("\nCORRECT ANSWER");
+                score=score+1000;
                 printf("\nPress Enter to get next question...");
                 getchar();
                 if(getchar() == '\n')
+                {
+                    if(score==10000)
+                    {
+                    printf("\nYou Won the Game.");
+                    }
+                    else
+                    {
                     random();
+                    }
+                }
             }
             else
                 wrong();
@@ -267,10 +358,20 @@ void tenth()
     if(ch==4)
             {
                 printf("\nCORRECT ANSWER");
+                score=score+1000;
                 printf("\nPress Enter to get next question...");
                 getchar();
                 if(getchar() == '\n')
+                {
+                    if(score==10000)
+                    {
+                    printf("\nYou Won the Game.");
+                    }
+                    else
+                    {
                     random();
+                    }
+                }
             }
             else
                 wrong();
@@ -343,10 +444,11 @@ void start()
         printf("\n\nPress Enter To Let The Game Roll..");
         if (getchar() == '\n')
         {
-              first();
+              random();
         }
-    }
-    printf("\nDo You Want to Continue Or not?(1/2):");
+        printf("\nDo You Want to Continue Or not?(1/2):");
     scanf("%d",&ch);
+
+    }
 }
 
