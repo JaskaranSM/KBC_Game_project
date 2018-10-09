@@ -67,6 +67,7 @@ int main()
 void first()
 {
             system("CLS");
+            printf("\nScore=%d",score);
             printf("\n\nWho Developed C-Language?");
             printf("\n\nOptions:-");
             printf("\n1.Nicola Tesla");
@@ -99,6 +100,7 @@ void first()
 void second()
 {
     system("CLS");
+    printf("\nScore=%d",score);
     printf("\n\nTraversing in Linked list Means?");
     printf("\nOptions:-");
     printf("\n1.Searching");
@@ -131,7 +133,8 @@ void second()
 void third()
 {
     system("CLS");
-    printf("\nThe Last element of an array in c will be at index ?");
+    printf("\nScore=%d",score);
+    printf("\n\nThe Last element of an array in c will be at index ?");
     printf("\n1.n");
     printf("\n2.n-1");
     printf("\n3.n+1");
@@ -162,7 +165,8 @@ void third()
 void fourth()
 {
     system("CLS");
-    printf("\nThe Index Value of Any Array starts From ?");
+    printf("\nScore=%d",score);
+    printf("\n\nThe Index Value of Any Array starts From ?");
     printf("\n1.0");
     printf("\n2.1");
     printf("\n3.-1");
@@ -193,7 +197,8 @@ void fourth()
 void fifth()
 {
     system("CLS");
-    printf("\nWho is the father of computer ?");
+    printf("\nScore=%d",score);
+    printf("\n\nWho is the father of computer ?");
     printf("\n1.Roman Pearce");
     printf("\n2.Steve Jobs");
     printf("\n3.Bill Gates");
@@ -224,7 +229,8 @@ void fifth()
 void sixth()
 {
     system("CLS");
-    printf("\nMaximum Data Rate of a DDR2 Ram is ?");
+    printf("\nScore=%d",score);
+    printf("\n\nMaximum Data Rate of a DDR2 Ram is ?");
     printf("\n1.533 MT/s");
     printf("\n2.667 MT/s");
     printf("\n3.1066 MT/s");
@@ -255,7 +261,8 @@ void sixth()
 void seventh()
 {
     system("CLS");
-    printf("\nWho is Fifth Prime Minister of India  ?");
+    printf("\nScore=%d",score);
+    printf("\n\nWho is Fifth Prime Minister of India  ?");
     printf("\n1.Rajiv Gandhi");
     printf("\n2.Charan Singh");
     printf("\n3.Inder Kumar Gujral");
@@ -286,7 +293,8 @@ void seventh()
 void eighth()
 {
     system("CLS");
-    printf("\nWhat is Einstein's Equation ?");
+    printf("\nScore=%d",score);
+    printf("\n\nWhat is Einstein's Equation ?");
     printf("\n1.E=Mc2");
     printf("\n2.(a+B)2=a2+2ab+b2");
     printf("\n3.x+y2=x+y/y2-x");
@@ -317,7 +325,8 @@ void eighth()
 void nineth()
 {
     system("CLS");
-    printf("\nWho Created Java Programming Language ?");
+    printf("\nScore=%d",score);
+    printf("\n\nWho Created Java Programming Language ?");
     printf("\n1.Guido van Rossum");
     printf("\n2.Yukihiro Matsumoto");
     printf("\n3.Bjarne Stroustrup");
@@ -348,7 +357,8 @@ void nineth()
 void tenth()
 {
     system("CLS");
-    printf("\nIf You Choose an answer to this question at random, What is the chance you will be correct ?");
+    printf("\nScore=%d",score);
+    printf("\n\nIf You Choose an answer to this question at random, What is the chance you will be correct ?");
     printf("\n1.25%");
     printf("\n2.35%");
     printf("\n3.50%");
@@ -379,6 +389,7 @@ void tenth()
 void wrong()
 {
     printf("\n\nYour Answer is wrong..So you Have to Try Again from starting..");
+    printf("\nYour Score=%d",score);
     printf("\nPress Enter to Restart Game..:");
     if (getchar() == '\n')
     {
