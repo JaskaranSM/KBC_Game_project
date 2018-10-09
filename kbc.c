@@ -448,6 +448,7 @@ void start()
     {
         getchar();
         system("CLS");
+        score=0;
         printf("----GAME STARTED----");
         printf("\nEnter Your Name:");
         gets(name);
