@@ -86,7 +86,10 @@ void first()
                 {
                     if(score==10000)
                     {
-                    printf("\nYou Won the Game.");
+                        system("CLS");
+                        printf("\nYou Won the Game.");
+                        printf("\nScore=%d",score);
+
                     }
                     else
                     {
@@ -119,7 +122,10 @@ void second()
                 {
                     if(score==10000)
                     {
-                    printf("\nYou Won the Game.");
+                        system("CLS");
+                        printf("\nYou Won the Game.");
+                        printf("\nScore=%d",score);
+
                     }
                     else
                     {
@@ -151,7 +157,10 @@ void third()
                 {
                     if(score==10000)
                     {
-                    printf("\nYou Won the Game.");
+                        system("CLS");
+                        printf("\nYou Won the Game.");
+                        printf("\nScore=%d",score);
+
                     }
                     else
                     {
@@ -183,7 +192,10 @@ void fourth()
                 {
                     if(score==10000)
                     {
-                    printf("\nYou Won the Game.");
+                        system("CLS");
+                        printf("\nYou Won the Game.");
+                        printf("\nScore=%d",score);
+
                     }
                     else
                     {
@@ -215,7 +227,10 @@ void fifth()
                 {
                     if(score==10000)
                     {
-                    printf("\nYou Won the Game.");
+                        system("CLS");
+                        printf("\nYou Won the Game.");
+                        printf("\nScore=%d",score);
+
                     }
                     else
                     {
@@ -247,7 +262,10 @@ void sixth()
                 {
                     if(score==10000)
                     {
-                    printf("\nYou Won the Game.");
+                        system("CLS");
+                        printf("\nYou Won the Game.");
+                        printf("\nScore=%d",score);
+
                     }
                     else
                     {
@@ -279,7 +297,10 @@ void seventh()
                 {
                     if(score==10000)
                     {
-                    printf("\nYou Won the Game.");
+                        system("CLS");
+                        printf("\nYou Won the Game.");
+                        printf("\nScore=%d",score);
+
                     }
                     else
                     {
@@ -311,7 +332,10 @@ void eighth()
                 {
                     if(score==10000)
                     {
-                    printf("\nYou Won the Game.");
+                        system("CLS");
+                        printf("\nYou Won the Game.");
+                        printf("\nScore=%d",score);
+
                     }
                     else
                     {
@@ -343,7 +367,10 @@ void nineth()
                 {
                     if(score==10000)
                     {
-                    printf("\nYou Won the Game.");
+                        system("CLS");
+                        printf("\nYou Won the Game.");
+                        printf("\nScore=%d",score);
+
                     }
                     else
                     {
@@ -375,7 +402,10 @@ void tenth()
                 {
                     if(score==10000)
                     {
-                    printf("\nYou Won the Game.");
+                        system("CLS");
+                        printf("\nYou Won the Game.");
+                        printf("\nScore=%d",score);
+
                     }
                     else
                     {
@@ -452,6 +482,7 @@ void start()
         printf("----GAME STARTED----");
         printf("\nEnter Your Name:");
         gets(name);
+        system("CLS");
         printf("\nHello %s, Welcome To The KBC Game..",name);
         printf("\n\nPress Enter To Let The Game Roll..");
         if (getchar() == '\n')
