@@ -51,7 +51,8 @@ int main()
          break;
     case 2:
         system("CLS");
-        printf("DIDNT ADDED YET....PRESS ENTER TO GO BACK.");
+        system("TYPE score");
+        printf("\nPress Enter To Go Back To Main Menu");
         getchar();
         if (getchar() == '\n')
             main();
@@ -86,6 +87,7 @@ void first()
                 {
                     if(score==10000)
                     {
+                        writefile();
                         system("CLS");
                         printf("\nYou Won the Game.");
                         printf("\nScore=%d",score);
@@ -122,6 +124,7 @@ void second()
                 {
                     if(score==10000)
                     {
+                        writefile();
                         system("CLS");
                         printf("\nYou Won the Game.");
                         printf("\nScore=%d",score);
@@ -157,6 +160,7 @@ void third()
                 {
                     if(score==10000)
                     {
+                        writefile();
                         system("CLS");
                         printf("\nYou Won the Game.");
                         printf("\nScore=%d",score);
@@ -192,6 +196,7 @@ void fourth()
                 {
                     if(score==10000)
                     {
+                        writefile();
                         system("CLS");
                         printf("\nYou Won the Game.");
                         printf("\nScore=%d",score);
@@ -227,6 +232,7 @@ void fifth()
                 {
                     if(score==10000)
                     {
+                        writefile();
                         system("CLS");
                         printf("\nYou Won the Game.");
                         printf("\nScore=%d",score);
@@ -262,6 +268,7 @@ void sixth()
                 {
                     if(score==10000)
                     {
+                        writefile();
                         system("CLS");
                         printf("\nYou Won the Game.");
                         printf("\nScore=%d",score);
@@ -297,6 +304,7 @@ void seventh()
                 {
                     if(score==10000)
                     {
+                        writefile();
                         system("CLS");
                         printf("\nYou Won the Game.");
                         printf("\nScore=%d",score);
@@ -332,6 +340,7 @@ void eighth()
                 {
                     if(score==10000)
                     {
+                        writefile();
                         system("CLS");
                         printf("\nYou Won the Game.");
                         printf("\nScore=%d",score);
@@ -367,6 +376,7 @@ void nineth()
                 {
                     if(score==10000)
                     {
+                        writefile();
                         system("CLS");
                         printf("\nYou Won the Game.");
                         printf("\nScore=%d",score);
@@ -402,6 +412,7 @@ void tenth()
                 {
                     if(score==10000)
                     {
+                        writefile();
                         system("CLS");
                         printf("\nYou Won the Game.");
                         printf("\nScore=%d",score);
@@ -421,6 +432,7 @@ void wrong()
     printf("\n\nYour Answer is wrong..So you Have to Try Again from starting..");
     printf("\nYour Score=%d",score);
     printf("\nPress Enter to Restart Game..:");
+    writefile();
     if (getchar() == '\n')
     {
         start();
@@ -493,5 +505,12 @@ void start()
     scanf("%d",&ch);
 
     }
+}
+void writefile()
+{
+    FILE *fp;
+    fp = fopen("Score.", "a");
+    fprintf(fp,"\nPlayer Name:%s\nScore:%d",name,score);
+    fclose(fp);
 }
 
